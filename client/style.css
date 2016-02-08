@@ -1,0 +1,98 @@
+.container {
+  width: 50%;
+  height: 50%;
+  max-height: 100%;
+  margin: auto;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.container div{
+  text-align: center;
+}
+::-webkit-scrollbar {
+    width: 1em;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.container tr th {
+  text-transform: uppercase;
+  color: #7c795d;
+  font-family: 'Trocchi';
+  font-size: 18px;
+}
+.container tr th:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.panel {
+  position: fixed;
+  width: 50%;
+  top: 0;
+}
+.panel a,
+.form-inline button:hover,
+.form-inline button a:hover {
+  color: #333;
+}
+a:hover {
+  text-decoration: none;
+}
+.element span {
+  color: #7c795d;
+  font-family: 'Trocchi';
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+.element select {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+.element input {
+  display: block;
+  width: 100%;
+}
+.select {
+  padding:3px;
+   margin: 0;
+   -webkit-border-radius:4px;
+   -moz-border-radius:4px;
+   border-radius:4px;
+   -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+   -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+   box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+   background: #f8f8f8;
+   color:#888;
+   border:none;
+   outline:none;
+   display: inline-block;
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   appearance:none;
+   cursor:pointer;
+}
+.isInvalid {
+  border: 5px solid #EC1D25;
+}
+@media (min-width: 1157px) {
+  .form-inline input {
+    width: 33%;
+    margin-right: 20%;
+  }
+  .form-inline button {
+    width: 23%;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}

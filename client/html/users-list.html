@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="panel panel-success">
+    <div class="panel-body">
+        <div class="form-inline">
+          <input class="form-control" placeholder="Search..." ng-model="query">
+          <button class="btn btn-default" ng-click="query=''">Clear</button>
+          <button class="btn btn-default"><a href="/#/users/new">Create new user</a></button>
+        </div>
+      </div>
+</div>
+  <table ng-show="filteredUsers.length" class="table table-hover">
+    <thead>
+      <tr>
+        <th ng-click="order='fullname'">Fullname</th>
+        <th ng-click="order='phone'">Phone</th>
+        <th ng-click="order='name'">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="user in filteredUsers = (users | filter:{fullname: query} | orderBy:order)">
+        <td><a href="#/users/edit/{{user.id}}">{{user.fullname}}</a></td>
+        <td ng-model="user.phone" mask="+d-(ddd)-ddd-dd-dd">{{user.phone}}</td>
+        <td>{{user.country_name}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="alert alert-danger" ng-show="!filteredUsers.length && loadComplete">No matches.</div>
+</div>

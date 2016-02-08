@@ -1,0 +1,17 @@
+<div class="container">
+  <div>
+  <form ng-submit="save()" name="user_data">
+    <p class="element"><span>Fullname:</span>
+      <input ng-model="user.fullname" type="text"></p>
+    <p class="element"><span>Phone:</span>
+      <input ng-class='{ isValid: phoneValid, isInvalid: !phoneValid  }' mask="+d-(ddd)-ddd-dd-dd" ng-model="user.phone" type="text"></p>
+    <p class="element"><span>Country:</span>
+      <select class="select" ng-model="user.country_id">
+        <option ng-repeat="country in countries" value="{{country.id * 1}}">{{country.name}}</option>
+      </select></p>
+    <p><input class="btn btn-info" type="submit" value="Send">
+       <input class="btn btn-info" ng-click="destroy()" type="button" value="Delete user">
+    </p>
+  </form>
+</div>
+</div>

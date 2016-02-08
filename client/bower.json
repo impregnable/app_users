@@ -1,0 +1,30 @@
+{
+  "name": "app_users",
+  "version": "0.0.0",
+  "authors": [
+    "impregnable <ImpregnableFiend@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-input-masks": "^2.1.1",
+    "ngMask": "angular-mask#^3.0.16"
+  },
+  "resolutions": {
+    "angular": "^1.5.0"
+  }
+}
