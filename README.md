@@ -1,4 +1,7 @@
 # app_users
+
+Requirements: Rails, Postgres
+
 ```
 # Run client
 cd client
