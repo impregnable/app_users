@@ -17,10 +17,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="user in filteredUsers = (users | filter:{fullname: query} | orderBy:order)">
-        <td><a href="#/users/edit/{{user.id}}">{{user.fullname}}</a></td>
-        <td ng-model="user.phone" mask="+d-(ddd)-ddd-dd-dd">{{user.phone}}</td>
-        <td>{{user.country_name}}</td>
+      <tr ng-repeat="::user in filteredUsers = (::users | filter:{fullname: query} | orderBy:order)">
+        <td><a href="#/users/edit/{{::user.id}}">{{::user.fullname}}</a></td>
+        <td>{{::user.phone}}</td>
+        <td>{{::user.country_name}}</td>
       </tr>
     </tbody>
   </table>
