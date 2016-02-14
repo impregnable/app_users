@@ -47,16 +47,12 @@ function($scope, $routeParams, usersFactory, countriesFactory, $location) {
       alert('Wrong phone format')
     }
     else {
-    // check user's phone number format
-    // example: /^\+\d-\(\d{3}\)-\d{3}-\d{2}-\d{2}/.test('+7-(911)-031-02-54')
-    // if wrong then alert about it and get out of here
-    // otherwise:
-    if(isEdit) {
-      usersFactory.update($scope.user).then(isSuccess,isFail)
-    }
-    else {
-      usersFactory.create($scope.user).then(isSuccess,isFail)
-    }
+      if(isEdit) {
+        usersFactory.update($scope.user).then(isSuccess,isFail)
+      }
+      else {
+        usersFactory.create($scope.user).then(isSuccess,isFail)
+      }
     }
   }
 
