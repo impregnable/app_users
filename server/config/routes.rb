@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-get '/users' => 'users#index'  # Get list
-get '/users/:id' => 'users#show' # Get one
-post '/users' => 'users#create' # Create
-put '/users/:id' => 'users#update' # Update
-delete '/users/:id' => 'users#destroy' # Delete
+get '/api/users' => 'users#index'  # Get list
+get '/api/users/:id' => 'users#show' # Get one
+post '/api/users' => 'users#create' # Create
+put '/api/users/:id' => 'users#update' # Update
+delete '/api/users/:id' => 'users#destroy' # Delete
 
-get '/countries' => 'countries#index'
+get '/api/countries' => 'countries#index'
 
   # Example resource route with options:
   #   resources :products do
